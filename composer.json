@@ -1,0 +1,15 @@
+{
+    "name": "codespace/ringforsaken",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alex Kuzmenko",
+            "email": "f3dstudiya@gmail.com"
+        }
+    ],
+    "require": {}
+}

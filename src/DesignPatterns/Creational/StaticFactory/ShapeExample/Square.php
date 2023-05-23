@@ -15,6 +15,6 @@ class Square implements Shape {
      * @inheritDoc
      */
     public function getArea(): float {
-        return pow($this->width);
+        return $this->width ** 2;
     }
 }

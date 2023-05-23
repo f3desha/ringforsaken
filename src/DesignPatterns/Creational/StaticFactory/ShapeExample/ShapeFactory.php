@@ -7,13 +7,14 @@ use InvalidArgumentException;
 class ShapeFactory {
     /**
      * @param string $type
+     * @param array $params
      *
      * @return Shape
      */
-    public static function factory(string $type): Shape {
+    public static function factory(string $type, array $params = []): Shape {
         return match ($type) {
-            'square' => new Square(),
-            'rectangle' => new Rectangle(),
+            'square' => new Square($params['width']),
+            'rectangle' => new Rectangle($params['width'], $params['height']),
             default => throw new InvalidArgumentException()
         };
     }

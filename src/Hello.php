@@ -2,7 +2,7 @@
 namespace App;
 
 class Hello {
-    public function test() {
-        echo 111;
+    public function test(): string {
+        return 'xxx';
     }
 }

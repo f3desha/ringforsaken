@@ -4,21 +4,21 @@ namespace App\DesignPatterns\Creational\CreationalMethod;
 
 class Number {
     /**
-     * @var float $value
+     * @var int
      */
-    private float $value;
+    private int $value;
 
     /**
-     * @param int|float $value
+     * @param int $value
      */
-    public function __construct(int|float $value) {
-        $this->value = (float)$value;
+    public function __construct(int $value) {
+        $this->value = $value;
     }
 
     /**
-     * @return float
+     * @return int
      */
-    public function getValue(): float {
+    public function getValue(): int {
         return $this->value;
     }
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\DesignPatterns\Creational\StaticFactory\TeslaStaticFactory\ClientCode;
+use App\DesignPatterns\Creational\StaticFactory\TeslaStaticFactory\TeslaModel3;
 
 require_once 'vendor/autoload.php';
 

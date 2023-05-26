@@ -1,0 +1,7 @@
+<?php declare(strict_types=1);
+
+namespace App\DesignPatterns\Behavioral\NullObject;
+
+interface Logger {
+    public function log(string $str): void;
+}

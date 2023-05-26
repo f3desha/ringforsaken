@@ -1,15 +1,18 @@
 <?php
 
-use App\DesignPatterns\Behavioral\NullObject\NullLogger;
-use App\DesignPatterns\Behavioral\NullObject\PrintLogger;
-use App\DesignPatterns\Behavioral\NullObject\Service;
+use App\DesignPatterns\Behavioral\Observer\User;
+use App\DesignPatterns\Behavioral\Observer\UserObserver;
 
 require_once 'vendor/autoload.php';
 
 final class App {
     final public static function run(): void {
-        $service = new Service(new PrintLogger());
-        $service->doSomething();
+        $observer = new UserObserver();
+
+        $user = new User();
+        $user->attach($observer);
+
+        $user->changeEmail('foo@mail.com');
     }
 
 

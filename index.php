@@ -1,16 +1,25 @@
 <?php
 
-use App\MyTry\FirstSimpleExampleImpovisation\ShopModule\ClientCode\Shop;
-use App\MyTry\FirstSimpleExampleImpovisation\ShopModule\Factory\ProductFactory;
-use App\MyTry\FirstSimpleExampleImpovisation\ShopModule\Storage\InMemoryStorage;
+use App\MyTry\SimpleCalculator\Calculator;
+use App\MyTry\SimpleCalculator\Distance;
+use App\MyTry\SimpleCalculator\Speed;
+use App\MyTry\SimpleCalculator\Time;
 
 require_once 'vendor/autoload.php';
 
 final class App {
     final public static function run(): void {
-        $shop = new Shop('Turboshop', new InMemoryStorage());
-        $product = $shop->findProduct(2, new ProductFactory());
-        $product->showPrice();
+        $calculator = new Calculator();
+
+        $speed = new Speed($calculator);
+        $speed->init(4);
+
+        $distance = new Distance($calculator);
+        $distance->init(12);
+
+        $time = new Time($calculator);
+        echo $time->getValue();
+
     }
 
 }
